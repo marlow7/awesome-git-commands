@@ -1,0 +1,743 @@
+/* ========================================
+   awesome-git-commands Custom Styles
+   Dark-first theme with strict color system
+   ======================================== */
+
+:root {
+  /* Brand Colors */
+  --agc-brand: #0ea5e9;
+  --agc-brand-hover: #0284c7;
+  --agc-brand-soft: rgba(14, 165, 233, 0.15);
+
+  /* Dark Theme Colors (Default) */
+  --agc-bg: #0f172a;
+  --agc-bg-card: #1e293b;
+  --agc-bg-content: #0f172a;
+  --agc-bg-code: #1e293b;
+  --agc-bg-input: #1e293b;
+
+  /* Text Colors */
+  --agc-text-title: #f8fafc;
+  --agc-text-body: #f1f5f9;
+  --agc-text-secondary: #94a3b8;
+  --agc-text-muted: #64748b;
+
+  /* Border & Divider */
+  --agc-border: #334155;
+  --agc-divider: #334155;
+
+  /* Status Colors */
+  --agc-success: #10b981;
+  --agc-warning: #f59e0b;
+  --agc-error: #ef4444;
+
+  /* Tags */
+  --agc-tag-high: #0ea5e9;
+  --agc-tag-common: #8b5cf6;
+  --agc-tag-low: #64748b;
+  --agc-tag-deprecated: #ef4444;
+
+  /* Spacing */
+  --agc-radius: 8px;
+  --agc-radius-lg: 12px;
+  --agc-transition: 150ms ease-in-out;
+}
+
+/* ========================================
+   Light Theme Overrides
+   ======================================== */
+html:not(.dark) {
+  --agc-bg: #ffffff;
+  --agc-bg-card: #f8fafc;
+  --agc-bg-content: #ffffff;
+  --agc-bg-code: #f1f5f9;
+  --agc-bg-input: #f1f5f9;
+
+  --agc-text-title: #0f172a;
+  --agc-text-body: #1e293b;
+  --agc-text-secondary: #475569;
+  --agc-text-muted: #94a3b8;
+
+  --agc-border: #e2e8f0;
+  --agc-divider: #e2e8f0;
+
+  --agc-brand-soft: rgba(14, 165, 233, 0.1);
+}
+
+/* ========================================
+   Global Base
+   ======================================== */
+.dark .VPSidebar,
+.dark .VPNav,
+.dark .VPContent {
+  background-color: var(--agc-bg);
+}
+
+.dark body {
+  background-color: var(--agc-bg);
+  color: var(--agc-text-body);
+}
+
+/* ========================================
+   Navigation Bar - Frosted Glass
+   ======================================== */
+.dark .VPNav {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--agc-border);
+}
+
+/* ========================================
+   Command Card Component
+   ======================================== */
+.agc-command-card {
+  background: var(--agc-bg-card);
+  border: 1px solid var(--agc-border);
+  border-radius: var(--agc-radius-lg);
+  padding: 20px 24px;
+  transition: transform var(--agc-transition), box-shadow var(--agc-transition), border-color var(--agc-transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.agc-command-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--agc-brand);
+}
+
+.dark .agc-command-card:hover {
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.1);
+}
+
+.agc-command-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--agc-text-title);
+  margin-bottom: 8px;
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.agc-command-card .card-desc {
+  font-size: 14px;
+  color: var(--agc-text-secondary);
+  line-height: 1.6;
+}
+
+.agc-command-card .card-copy-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--agc-brand-soft);
+  border: 1px solid var(--agc-border);
+  color: var(--agc-brand);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--agc-transition);
+  text-decoration: none;
+}
+
+.agc-command-card .card-copy-btn:hover {
+  background: var(--agc-brand);
+  color: #fff;
+}
+
+/* ========================================
+   Category Card
+   ======================================== */
+.agc-category-card {
+  background: var(--agc-bg-card);
+  border: 1px solid var(--agc-border);
+  border-radius: var(--agc-radius-lg);
+  padding: 24px;
+  transition: transform var(--agc-transition), box-shadow var(--agc-transition), border-color var(--agc-transition);
+  cursor: pointer;
+  text-decoration: none !important;
+  display: block;
+}
+
+.agc-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--agc-brand);
+}
+
+.dark .agc-category-card:hover {
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.1);
+}
+
+.agc-category-card .category-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--agc-text-title);
+  margin-bottom: 8px;
+}
+
+.agc-category-card .category-count {
+  font-size: 13px;
+  color: var(--agc-brand);
+  margin-bottom: 6px;
+}
+
+.agc-category-card .category-desc {
+  font-size: 14px;
+  color: var(--agc-text-secondary);
+  line-height: 1.5;
+}
+
+/* ========================================
+   Tags
+   ======================================== */
+.agc-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  line-height: 1.5;
+}
+
+.agc-tag-high {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+}
+
+.agc-tag-common {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+.agc-tag-low {
+  background: rgba(100, 116, 139, 0.15);
+  color: #94a3b8;
+}
+
+.agc-tag-deprecated {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.agc-tag-easy {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.agc-tag-medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.agc-tag-advanced {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+/* ========================================
+   Command Detail Page
+   ======================================== */
+.agc-detail-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--agc-border);
+}
+
+.agc-detail-header h1 {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--agc-text-title);
+  margin-bottom: 12px;
+}
+
+.agc-detail-header .official-def {
+  font-size: 16px;
+  color: var(--agc-text-secondary);
+  margin-bottom: 12px;
+  padding-left: 16px;
+  border-left: 3px solid var(--agc-brand);
+}
+
+.agc-detail-header .tags-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.agc-detail-header .official-link {
+  font-size: 14px;
+  color: var(--agc-brand);
+}
+
+/* ========================================
+   Parameter Table
+   ======================================== */
+.agc-param-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.agc-param-table th {
+  background: var(--agc-bg-card);
+  color: var(--agc-text-title);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--agc-border);
+}
+
+.agc-param-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--agc-border);
+  color: var(--agc-text-body);
+  vertical-align: top;
+}
+
+.agc-param-table tr:hover td {
+  background: var(--agc-brand-soft);
+}
+
+.agc-param-table .param-name {
+  font-family: Consolas, 'Courier New', monospace;
+  color: var(--agc-brand);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.agc-param-table .param-highlight {
+  background: rgba(14, 165, 233, 0.08);
+}
+
+/* ========================================
+   Code Block Enhancements
+   ======================================== */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--agc-radius);
+  border: 1px solid var(--agc-border);
+}
+
+.vp-doc div[class*='language-'] code {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.dark .vp-doc div[class*='language-'] {
+  background: var(--agc-bg-code) !important;
+}
+
+/* ========================================
+   Tip/Warning Containers
+   ======================================== */
+.custom-block.tip {
+  border-color: var(--agc-brand);
+}
+
+.custom-block.warning {
+  border-color: var(--agc-warning);
+}
+
+.custom-block.danger {
+  border-color: var(--agc-error);
+}
+
+.dark .custom-block.tip {
+  background: rgba(14, 165, 233, 0.08);
+}
+
+.dark .custom-block.warning {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.dark .custom-block.danger {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+/* ========================================
+   Hero Section Custom
+   ======================================== */
+.agc-hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.agc-hero-actions .action-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: var(--agc-radius);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all var(--agc-transition);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.agc-hero-actions .action-primary {
+  background: var(--agc-brand);
+  color: #fff;
+}
+
+.agc-hero-actions .action-primary:hover {
+  background: var(--agc-brand-hover);
+  transform: translateY(-1px);
+}
+
+.agc-hero-actions .action-secondary {
+  background: var(--agc-brand-soft);
+  color: var(--agc-brand);
+  border: 1px solid var(--agc-brand);
+}
+
+.agc-hero-actions .action-secondary:hover {
+  background: var(--agc-brand);
+  color: #fff;
+}
+
+/* ========================================
+   Grid Layouts
+   ======================================== */
+.agc-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.agc-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.agc-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .agc-grid-4 { grid-template-columns: repeat(3, 1fr); }
+  .agc-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .agc-grid-4,
+  .agc-grid-3,
+  .agc-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Section Title
+   ======================================== */
+.agc-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--agc-text-title);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--agc-border);
+}
+
+/* ========================================
+   Advantages Section
+   ======================================== */
+.agc-advantage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--agc-radius);
+  background: var(--agc-bg-card);
+  border: 1px solid var(--agc-border);
+}
+
+.agc-advantage-item .advantage-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--agc-brand-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--agc-brand);
+  font-size: 20px;
+}
+
+.agc-advantage-item .advantage-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--agc-text-title);
+  margin-bottom: 4px;
+}
+
+.agc-advantage-item .advantage-content p {
+  font-size: 14px;
+  color: var(--agc-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========================================
+   Favorites
+   ======================================== */
+.agc-fav-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--agc-text-muted);
+  transition: color var(--agc-transition);
+  padding: 4px;
+}
+
+.agc-fav-btn:hover,
+.agc-fav-btn.active {
+  color: var(--agc-warning);
+}
+
+/* ========================================
+   Toast Notification
+   ======================================== */
+.agc-toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: var(--agc-radius);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  animation: agc-slide-in 0.3s ease-out;
+  transition: opacity 0.3s;
+}
+
+.agc-toast-success {
+  background: rgba(16, 185, 129, 0.9);
+  color: #fff;
+}
+
+.agc-toast-error {
+  background: rgba(239, 68, 68, 0.9);
+  color: #fff;
+}
+
+@keyframes agc-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   Back to Top
+   ======================================== */
+.agc-back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--agc-bg-card);
+  border: 1px solid var(--agc-border);
+  color: var(--agc-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--agc-transition);
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agc-back-to-top:hover {
+  background: var(--agc-brand);
+  color: #fff;
+  border-color: var(--agc-brand);
+}
+
+/* ========================================
+   Breadcrumb
+   ======================================== */
+.agc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--agc-text-secondary);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.agc-breadcrumb a {
+  color: var(--agc-brand);
+  text-decoration: none;
+}
+
+.agc-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.agc-breadcrumb .separator {
+  color: var(--agc-text-muted);
+}
+
+/* ========================================
+   VitePress Overrides for Dark Theme
+   ======================================== */
+.dark .VPButton.brand {
+  background: var(--agc-brand);
+}
+
+.dark .VPButton.brand:hover {
+  background: var(--agc-brand-hover);
+}
+
+.dark .VPLink:not(.active):hover {
+  color: var(--agc-brand);
+}
+
+.dark .VPDoc .content-container {
+  max-width: 900px;
+}
+
+/* Ensure dark code blocks */
+.dark [class*='language-'] pre {
+  background: var(--agc-bg-code) !important;
+}
+
+/* ========================================
+   Scene Category Command List
+   ======================================== */
+.agc-cmd-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--agc-radius);
+  border: 1px solid var(--agc-border);
+  background: var(--agc-bg-card);
+  margin-bottom: 8px;
+  transition: all var(--agc-transition);
+  text-decoration: none;
+}
+
+.agc-cmd-list-item:hover {
+  border-color: var(--agc-brand);
+  background: var(--agc-brand-soft);
+}
+
+.agc-cmd-list-item .cmd-name {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--agc-brand);
+}
+
+.agc-cmd-list-item .cmd-desc {
+  font-size: 14px;
+  color: var(--agc-text-secondary);
+  flex: 1;
+  margin-left: 16px;
+}
+
+.agc-cmd-list-item .cmd-tags {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Responsive Tweaks
+   ======================================== */
+@media (max-width: 768px) {
+  .agc-hero-actions {
+    flex-direction: column;
+  }
+
+  .agc-hero-actions .action-btn {
+    justify-content: center;
+  }
+
+  .agc-cmd-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .agc-cmd-list-item .cmd-desc {
+    margin-left: 0;
+  }
+
+  .agc-detail-header h1 {
+    font-size: 24px;
+  }
+
+  .agc-param-table {
+    font-size: 13px;
+  }
+
+  .agc-param-table th,
+  .agc-param-table td {
+    padding: 8px 10px;
+  }
+}
+
+/* ========================================
+   Related Commands
+   ======================================== */
+.agc-related-commands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.agc-related-commands a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--agc-bg-card);
+  border: 1px solid var(--agc-border);
+  color: var(--agc-brand);
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all var(--agc-transition);
+}
+
+.agc-related-commands a:hover {
+  background: var(--agc-brand-soft);
+  border-color: var(--agc-brand);
+}
+
+/* ========================================
+   Section Spacing
+   ======================================== */
+.agc-section {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+/* Footer */
+.dark .VPFooter {
+  background: var(--agc-bg) !important;
+  border-top: 1px solid var(--agc-border);
+}

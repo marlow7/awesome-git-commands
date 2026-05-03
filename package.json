@@ -1,0 +1,32 @@
+{
+  "name": "awesome-git-commands",
+  "version": "1.0.0",
+  "description": "Git 全量命令权威手册 | 开发者专属 Git 命令速查工具",
+  "license": "GPL-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs --port 5000",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs --port 5000"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  },
+  "keywords": [
+    "git",
+    "git-commands",
+    "vitepress",
+    "reference",
+    "cheatsheet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marlow7/awesome-git-commands"
+  }
+}

@@ -1,0 +1,67 @@
+# VitePress GitHub Pages 自动部署配置
+name: Deploy to GitHub Pages
+
+# 触发条件：推送到 main 分支时自动执行，也支持手动触发
+on:
+  push:
+    branches: [ main ] # 如果你用的主分支名是 master，这里改成 master
+  workflow_dispatch: # 支持在 GitHub 网页手动触发部署
+
+# 部署所需的权限（必须配置，否则会部署失败）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 并发控制：避免同时多个部署任务冲突
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 构建任务
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取你的代码
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 拉取完整历史，用于生成侧边栏等功能
+
+      # 2. 安装 Node.js 环境（适配你的 pnpm 包管理器）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 用稳定的LTS版本
+          cache: pnpm # 缓存pnpm依赖，加快构建速度
+
+      # 3. 启用 pnpm
+      - name: Enable pnpm
+        run: corepack enable
+
+      # 4. 安装项目依赖
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 5. 构建 VitePress 项目
+      - name: Build VitePress
+        run: pnpm run docs:build
+
+      # 6. 上传构建产物
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist # 你的项目构建产物路径，完全匹配你的结构
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build # 等构建完成后再执行部署
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
