@@ -1,9 +1,7 @@
-import { defineConfig } from 'vitepress'
-
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+import { defineConfig, withBase } from 'vitepress'
 
 export default defineConfig({
-  base: isGitHubPages ? '/awesome-git-commands/' : '/',
+  base: '/awesome-git-commands/',
   title: 'awesome-git-commands',
   description: 'Git 全量命令权威手册 | 开发者专属 Git 命令速查工具',
 
@@ -19,13 +17,13 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: withBase('/logo.svg') }],
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { name: 'author', content: 'awesome-git-commands' }],
   ],
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: withBase('/logo.svg'),
 
     nav: [
       { text: '命令大全', link: '/commands/' },

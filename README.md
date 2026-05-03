@@ -2,8 +2,7 @@
 
 # Git Command Chinese Reference Manual
 
-## Project Introduction
-A comprehensive Chinese Git reference strictly following the official documentation. It covers core commands from basic to advanced, including definitions, syntax, parameters, practical examples and common pitfalls.
+A comprehensive Chinese Git reference strictly following the official documentation. <br>It covers core commands from basic to advanced, including definitions, syntax, parameters, practical examples and common pitfalls.
 
 </div>
 
@@ -32,6 +31,3 @@ pnpm dev
 # Build for production
 pnpm build
 ```
-
-## License
-This project is open-sourced under the **CC BY 4.0** license.
