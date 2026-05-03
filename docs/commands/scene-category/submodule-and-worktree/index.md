@@ -3,7 +3,7 @@ title: 子模块与多工作树管理
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
   <span>场景化分类</span>
   <span class="separator">/</span>
@@ -16,7 +16,7 @@ title: 子模块与多工作树管理
 
 ## 命令列表
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/submodule-and-worktree/git-submodule">
+<a class="agc-cmd-list-item" href="./git-submodule">
   <div>
     <span class="cmd-name">git submodule</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -25,7 +25,7 @@ title: 子模块与多工作树管理
   <span class="cmd-desc">初始化、更新或检查子模块</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/submodule-and-worktree/git-worktree">
+<a class="agc-cmd-list-item" href="./git-worktree">
   <div>
     <span class="cmd-name">git worktree</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -34,7 +34,7 @@ title: 子模块与多工作树管理
   <span class="cmd-desc">管理多个工作树</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/submodule-and-worktree/git-sparse-checkout">
+<a class="agc-cmd-list-item" href="./git-sparse-checkout">
   <div>
     <span class="cmd-name">git sparse-checkout</span>
     <span class="agc-tag agc-tag-low">底层</span>

@@ -3,9 +3,9 @@ title: git tag
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
-  <a href="/commands/scene-category/tag-and-release/">标签与版本管理</a>
+  <a href="./">标签与版本管理</a>
   <span class="separator">/</span>
   <span>git tag</span>
 </div>
