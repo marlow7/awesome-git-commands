@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress'
 
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+
 export default defineConfig({
-  base: process.argv.includes('build') ? '/awesome-git-commands/' : '/',
+  base: isGitHubPages ? '/awesome-git-commands/' : '/',
   title: 'awesome-git-commands',
   description: 'Git 全量命令权威手册 | 开发者专属 Git 命令速查工具',
 
@@ -17,7 +19,7 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { name: 'author', content: 'awesome-git-commands' }],
   ],
@@ -29,7 +31,7 @@ export default defineConfig({
       { text: '命令大全', link: '/commands/' },
       { text: '实用指南', link: '/guides/' },
       { text: '官方文档', link: 'https://git-scm.com/docs/git' },
-      { text: 'GitHub 仓库', link: 'https://github.com/awesome-git-commands/awesome-git-commands' },
+      { text: 'GitHub 仓库', link: 'https://github.com/marlow7/awesome-git-commands' },
     ],
 
     sidebar: {
@@ -104,7 +106,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/awesome-git-commands/awesome-git-commands/edit/main/docs/:path',
+      pattern: 'https://github.com/marlow7/awesome-git-commands/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
 
@@ -114,7 +116,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/awesome-git-commands/awesome-git-commands' },
+      { icon: 'github', link: 'https://github.com/marlow7/awesome-git-commands' },
     ],
 
     lastUpdated: {
