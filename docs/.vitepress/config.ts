@@ -17,13 +17,13 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: withBase('/logo.svg') }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { name: 'author', content: 'awesome-git-commands' }],
   ],
 
   themeConfig: {
-    logo: withBase('/logo.svg'),
+    logo: '/logo.svg',
 
     nav: [
       { text: '命令大全', link: '/commands/' },
