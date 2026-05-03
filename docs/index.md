@@ -34,6 +34,7 @@ features:
   background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 </style>
 
