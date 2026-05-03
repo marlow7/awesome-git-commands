@@ -3,7 +3,7 @@ title: 仓库初始化与基础配置
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
   <span>场景化分类</span>
   <span class="separator">/</span>
@@ -16,7 +16,7 @@ title: 仓库初始化与基础配置
 
 ## 命令列表
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/init-and-config/git-init">
+<a class="agc-cmd-list-item" href="./git-init">
   <div>
     <span class="cmd-name">git init</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -25,7 +25,7 @@ title: 仓库初始化与基础配置
   <span class="cmd-desc">创建一个新的 Git 仓库或重新初始化已有仓库</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/init-and-config/git-clone">
+<a class="agc-cmd-list-item" href="./git-clone">
   <div>
     <span class="cmd-name">git clone</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -34,7 +34,7 @@ title: 仓库初始化与基础配置
   <span class="cmd-desc">克隆远程仓库到本地</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/init-and-config/git-config">
+<a class="agc-cmd-list-item" href="./git-config">
   <div>
     <span class="cmd-name">git config</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -43,7 +43,7 @@ title: 仓库初始化与基础配置
   <span class="cmd-desc">获取和设置仓库或全局配置选项</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/init-and-config/git-tag">
+<a class="agc-cmd-list-item" href="./git-tag">
   <div>
     <span class="cmd-name">git tag</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -52,7 +52,7 @@ title: 仓库初始化与基础配置
   <span class="cmd-desc">创建、列出、删除或验证 GPG 签名的标签对象</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/init-and-config/git-remote">
+<a class="agc-cmd-list-item" href="./git-remote">
   <div>
     <span class="cmd-name">git remote</span>
     <span class="agc-tag agc-tag-high">高频</span>

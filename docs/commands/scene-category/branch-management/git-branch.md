@@ -3,9 +3,9 @@ title: git branch
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
-  <a href="/commands/scene-category/branch-management/">分支管理与切换</a>
+  <a href="./">分支管理与切换</a>
   <span class="separator">/</span>
   <span>git branch</span>
 </div>

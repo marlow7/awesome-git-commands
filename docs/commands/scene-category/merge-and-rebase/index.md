@@ -3,7 +3,7 @@ title: 代码合并与变基
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
   <span>场景化分类</span>
   <span class="separator">/</span>
@@ -16,7 +16,7 @@ title: 代码合并与变基
 
 ## 命令列表
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/merge-and-rebase/git-merge">
+<a class="agc-cmd-list-item" href="./git-merge">
   <div>
     <span class="cmd-name">git merge</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -25,7 +25,7 @@ title: 代码合并与变基
   <span class="cmd-desc">合并两个或更多开发历史</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/merge-and-rebase/git-rebase">
+<a class="agc-cmd-list-item" href="./git-rebase">
   <div>
     <span class="cmd-name">git rebase</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -34,7 +34,7 @@ title: 代码合并与变基
   <span class="cmd-desc">在另一个基线顶端重新应用提交</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/merge-and-rebase/git-cherry-pick">
+<a class="agc-cmd-list-item" href="./git-cherry-pick">
   <div>
     <span class="cmd-name">git cherry-pick</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -43,7 +43,7 @@ title: 代码合并与变基
   <span class="cmd-desc">应用某些已有提交引入的变更</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/merge-and-rebase/git-mergetool">
+<a class="agc-cmd-list-item" href="./git-mergetool">
   <div>
     <span class="cmd-name">git mergetool</span>
     <span class="agc-tag agc-tag-common">常用</span>

@@ -3,7 +3,7 @@ title: 提交回滚与版本恢复
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
   <span>场景化分类</span>
   <span class="separator">/</span>
@@ -20,7 +20,7 @@ title: 提交回滚与版本恢复
 
 ## 命令列表
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/rollback-and-restore/git-reset">
+<a class="agc-cmd-list-item" href="./git-reset">
   <div>
     <span class="cmd-name">git reset</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -29,7 +29,7 @@ title: 提交回滚与版本恢复
   <span class="cmd-desc">重置当前 HEAD 到指定状态</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/rollback-and-restore/git-restore">
+<a class="agc-cmd-list-item" href="./git-restore">
   <div>
     <span class="cmd-name">git restore</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -38,7 +38,7 @@ title: 提交回滚与版本恢复
   <span class="cmd-desc">恢复工作树文件</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/rollback-and-restore/git-revert">
+<a class="agc-cmd-list-item" href="./git-revert">
   <div>
     <span class="cmd-name">git revert</span>
     <span class="agc-tag agc-tag-high">高频</span>
@@ -47,7 +47,7 @@ title: 提交回滚与版本恢复
   <span class="cmd-desc">撤销某些已有提交</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/rollback-and-restore/git-clean">
+<a class="agc-cmd-list-item" href="./git-clean">
   <div>
     <span class="cmd-name">git clean</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -56,7 +56,7 @@ title: 提交回滚与版本恢复
   <span class="cmd-desc">从工作树中删除未跟踪的文件</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/rollback-and-restore/git-reflog">
+<a class="agc-cmd-list-item" href="./git-reflog">
   <div>
     <span class="cmd-name">git reflog</span>
     <span class="agc-tag agc-tag-common">常用</span>

@@ -3,9 +3,9 @@ title: git remote
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
-  <a href="/commands/scene-category/remote-collaboration/">远程仓库协作</a>
+  <a href="./">远程仓库协作</a>
   <span class="separator">/</span>
   <span>git remote</span>
 </div>

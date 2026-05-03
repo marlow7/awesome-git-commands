@@ -3,7 +3,7 @@ title: 故障排查与数据恢复
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
   <span>场景化分类</span>
   <span class="separator">/</span>
@@ -16,7 +16,7 @@ title: 故障排查与数据恢复
 
 ## 命令列表
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/troubleshooting/git-bisect">
+<a class="agc-cmd-list-item" href="./git-bisect">
   <div>
     <span class="cmd-name">git bisect</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -25,7 +25,7 @@ title: 故障排查与数据恢复
   <span class="cmd-desc">使用二分查找定位引入 bug 的提交</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/troubleshooting/git-fsck">
+<a class="agc-cmd-list-item" href="./git-fsck">
   <div>
     <span class="cmd-name">git fsck</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -33,7 +33,7 @@ title: 故障排查与数据恢复
   <span class="cmd-desc">验证数据库中对象的连通性和有效性</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/troubleshooting/git-reflog">
+<a class="agc-cmd-list-item" href="./git-reflog">
   <div>
     <span class="cmd-name">git reflog</span>
     <span class="agc-tag agc-tag-common">常用</span>
@@ -42,7 +42,7 @@ title: 故障排查与数据恢复
   <span class="cmd-desc">管理 reflog 信息，找回丢失的提交</span>
 </a>
 
-<a class="agc-cmd-list-item" href="/commands/scene-category/troubleshooting/git-stash">
+<a class="agc-cmd-list-item" href="./git-stash">
   <div>
     <span class="cmd-name">git stash</span>
     <span class="agc-tag agc-tag-high">高频</span>

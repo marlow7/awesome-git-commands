@@ -1,4 +1,4 @@
-import { defineConfig, withBase } from 'vitepress'
+import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   base: '/awesome-git-commands/',

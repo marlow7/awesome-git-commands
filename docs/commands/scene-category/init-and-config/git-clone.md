@@ -3,9 +3,9 @@ title: git clone
 ---
 
 <div class="agc-breadcrumb">
-  <a href="/commands/">命令大全</a>
+  <a href="../../">命令大全</a>
   <span class="separator">/</span>
-  <a href="/commands/scene-category/init-and-config/">仓库初始化与基础配置</a>
+  <a href="./">仓库初始化与基础配置</a>
   <span class="separator">/</span>
   <span>git clone</span>
 </div>
